@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2b292f",
+                        "surface-container-lowest": "#0f0d13",
+                        "secondary-fixed-dim": "#cdc0e9",
+                        "error-container": "#93000a",
+                        "surface-bright": "#3b383e",
+                        "secondary-container": "#4d4465",
+                        "inverse-primary": "#6750a4",
+                        "tertiary": "#e7c365",
+                        "surface-tint": "#cfbcff",
+                        "inverse-surface": "#e6e0e9",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#e7c365",
+                        "on-tertiary-fixed-variant": "#594400",
+                        "on-primary-fixed-variant": "#4f378a",
+                        "surface-container": "#211f24",
+                        "surface-container-low": "#1d1b20",
+                        "on-secondary-fixed-variant": "#4b4263",
+                        "on-surface": "#e6e0e9",
+                        "on-background": "#e6e0e9",
+                        "surface": "#141218",
+                        "surface-container-highest": "#36343a",
+                        "tertiary-container": "#c9a74d",
+                        "on-secondary-container": "#bfb2da",
+                        "primary-fixed-dim": "#cfbcff",
+                        "on-surface-variant": "#cbc4d2",
+                        "surface-dim": "#141218",
+                        "surface-variant": "#36343a",
+                        "outline": "#948e9c",
+                        "on-secondary-fixed": "#1f1635",
+                        "on-primary-container": "#e0d2ff",
+                        "on-primary-fixed": "#22005d",
+                        "on-tertiary-container": "#503d00",
+                        "secondary-fixed": "#e9ddff",
+                        "inverse-on-surface": "#322f35",
+                        "primary": "#cfbcff",
+                        "on-secondary": "#342b4b",
+                        "tertiary-fixed": "#ffdf93",
+                        "on-tertiary": "#3e2e00",
+                        "on-error-container": "#ffdad6",
+                        "background": "#141218",
+                        "primary-container": "#6750a4",
+                        "primary-fixed": "#e9ddff",
+                        "outline-variant": "#494551",
+                        "secondary": "#cdc0e9",
+                        "on-primary": "#381e72",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "max_width": "1200px",
+                        "section_gap_sm": "80px",
+                        "side_padding": "24px",
+                        "section_gap_lg": "120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "h3": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gloamy-shadow {
+            box-shadow: 0 40px 60px -15px rgba(15, 13, 19, 0.4);
+        }
+        .tonal-border {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+<div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+<span class="text-xl font-bold tracking-widest text-slate-50 font-h1">LUXE ESTATE</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-medium text-slate-50 border-b-2 border-amber-400 pb-1 hover:text-slate-50 transition-all duration-300" href="#">Properties</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-medium text-slate-400 hover:text-slate-50 transition-all duration-300" href="#">Exclusives</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-medium text-slate-400 hover:text-slate-50 transition-all duration-300" href="#">Process</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-medium text-slate-400 hover:text-slate-50 transition-all duration-300" href="#">Insights</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-medium text-slate-400 hover:text-slate-50 transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg text-sm font-semibold hover:scale-105 active:scale-95 transition-transform shadow-lg">
+                Schedule Tour
+            </button>
+<button class="md:hidden text-slate-50">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="An ultra-modern luxury mansion at twilight, showcasing sharp architectural lines and expansive floor-to-ceiling glass walls. The interior glows with warm, sophisticated ambient lighting, contrasting beautifully against the deep navy blue dusk sky. A minimalist infinity pool in the foreground reflects the sleek structure, creating a sense of serene exclusivity and architectural precision. The overall mood is authoritative and high-end, fitting for the ultra-high-net-worth real estate market." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4pPsizLcbdKkC1xnmpneRogw0App18cloNHlk4nbB2jLrN3zE07bJ0mjj1MilrTOwONVbBWIfYF2pZHsBjxqAx41pdIEvZwj8NcOsi4dde3yAbRMzOSeBxQCTR0PR82vNNhF8j3-eSwpMrYhEBkQcnjQpRAKG78ehparfxquXojDBuREWOfjpiX-q7QfNGozMarrdukKS4z6T4uRfPByKNqikbv-WJ_ca4a9-MixquKNxfW70GsV2ZAOOgTGwMoe8SuGp9JkoN19"/>
+<div class="absolute inset-0 bg-slate-950/60 backdrop-brightness-50"></div>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
+<h1 class="font-h1 text-h1 text-white mb-6 max-w-4xl mx-auto">Encontre o imóvel ideal para você</h1>
+<p class="font-body-lg text-body-lg text-slate-300 mb-10 max-w-2xl mx-auto">Onde sofisticação e conforto se encontram nos endereços mais exclusivos.</p>
+<button class="bg-[#3B82F6] text-white px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-transform gloamy-shadow">
+                Conhecer Imóveis
+            </button>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center p-8 rounded-xl bg-surface-container tonal-border hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+</div>
+<h3 class="font-h3 text-xl mb-3 text-slate-50">Curadoria Exclusiva</h3>
+<p class="text-on-surface-variant text-sm">Seleção rigorosa dos imóveis mais prestigiados do mercado.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 rounded-xl bg-surface-container tonal-border hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">gavel</span>
+</div>
+<h3 class="font-h3 text-xl mb-3 text-slate-50">Consultoria Jurídica</h3>
+<p class="text-on-surface-variant text-sm">Segurança total em cada etapa do seu investimento imobiliário.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 rounded-xl bg-surface-container tonal-border hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+</div>
+<h3 class="font-h3 text-xl mb-3 text-slate-50">Atendimento Personalizado</h3>
+<p class="text-on-surface-variant text-sm">Acompanhamento dedicado para entender suas reais necessidades.</p>
+</div>
+</div>
+</section>
+<!-- Featured Properties -->
+<section class="py-24 bg-background">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-tertiary font-label-caps uppercase tracking-widest mb-2 block">Destaques</span>
+<h2 class="font-h2 text-h2 text-slate-50">Propriedades em Destaque</h2>
+</div>
+<button class="text-slate-400 border border-slate-700 px-6 py-2 rounded-lg hover:text-white hover:border-white transition-all">Ver Todos</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Property Card 1 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden tonal-border hover:shadow-2xl transition-all duration-500">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A sprawling contemporary mansion in the upscale Jardins neighborhood of São Paulo. The image captures the property during the golden hour, with warm sunlight illuminating its minimalist concrete and wood facade. Massive glass panels reveal a luxurious interior, and the lush tropical landscaping around the perimeter enhances the sense of privacy and exclusivity. The color palette is dominated by elegant grays, rich wood tones, and the deep green of manicured lawns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2bm4nyvuKGudhFj1o2d2IxNnyIrzYOVE0A--eKUzL4G01BQBlSD3D-nmDdqZtFKeLgtQ1wjSMQt9bccdifgkS-PtNX0INyaXfhQ3w2LjAXrDV7QgWNk5faYF1yuwqlA0sWnF7FrtIhAA0dTMdY3qeTDn88N-x6UfiKGi522XS9hOej7aqEvFsjKlIfbUi7IN0JAXrS8l6VorZ2TpnVu502Kcd_cFbO109sWSsM2i_yzgSnu0SrTXNERmHJwjNLBLiZl1ewi0IR_t3"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 text-sm font-bold rounded">
+                            R$ 4.500.000
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Jardins, SP
+                        </div>
+<h4 class="font-h3 text-xl text-slate-50 mb-4">Residência Bauhaus Contemporânea</h4>
+<div class="flex justify-between items-center border-t border-white/5 pt-4">
+<div class="flex gap-4 text-slate-400 text-xs">
+<span>4 Suítes</span>
+<span>6 Vagas</span>
+<span>450m²</span>
+</div>
+<button class="text-primary font-semibold hover:underline">Detalhes</button>
+</div>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden tonal-border hover:shadow-2xl transition-all duration-500">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An exquisite high-end villa featuring an open-concept living space that seamlessly blends with a wide outdoor terrace. The architectural design uses premium materials like white marble and dark steel accents. Soft evening lighting creates a luminous and expansive atmosphere, highlighting the high ceilings and luxury furniture. The setting is a prestigious residential enclave, conveying calm confidence and architectural precision in every detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2MTiHrsXnT8nbadbrcIkidcdeDifGR6QHhNcUmzmvfjqdbQF8jLa4c3JgTTDecIP2jvmpQdcJH0Qc1ySdYbJ0fTTnZdPnm-R4XoY8jeui_1vAnuIWBJdyKw59crD_etkeAp_rJjv70mUQ4lP0oNpz8CJ5oICfrT3aOeDsizSr751Q04SBlpvciPDhCXAJs0InkimU3lkiOnaBrMeN6zHhcYJUnQcPLHo8OtHkaYvdit10GzfbseK3CgZTFAto75eOEddJfEZrXeGZ"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 text-sm font-bold rounded">
+                            R$ 7.200.000
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Itaim Bibi, SP
+                        </div>
+<h4 class="font-h3 text-xl text-slate-50 mb-4">Penthouse Sky View</h4>
+<div class="flex justify-between items-center border-t border-white/5 pt-4">
+<div class="flex gap-4 text-slate-400 text-xs">
+<span>3 Suítes</span>
+<span>4 Vagas</span>
+<span>320m²</span>
+</div>
+<button class="text-primary font-semibold hover:underline">Detalhes</button>
+</div>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden tonal-border hover:shadow-2xl transition-all duration-500">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A luxurious coastal estate with a modern Mediterranean architectural style. The white-washed walls contrast with the deep blue of the Atlantic Ocean in the background. Large arching windows and a private stone walkway leading to a secluded beach area characterize the property. The scene is bright and airy, using a high-key light-mode aesthetic that feels fresh, expansive, and incredibly exclusive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX0LlgQyQUGSbfPbUkiXGxGH4tPGaG3Odrwk9Z_OTucsGnN3delIGwtHXSEN_Huwm4whB__a0ijMBSXFWE23Fo7YNkrEYrFTEjnJjX3-eQxZoLo0-MUSsN4qo2LfGUznTtN0JXfSJKREjn4MTbriwKJs4HOL0d-RyvoKcGtCF62SB6dgPj1Kyls144RGu1e8ba4P0-Yy32nvzAbnpJsghLzhOcBfje9vSFMqaU-CNsx6x2HsGQU4QUgL8AtEPoD4u_4gvz9owsiCjc"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 text-sm font-bold rounded">
+                            R$ 12.800.000
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Leblon, RJ
+                        </div>
+<h4 class="font-h3 text-xl text-slate-50 mb-4">Casa do Penhasco Ocean Front</h4>
+<div class="flex justify-between items-center border-t border-white/5 pt-4">
+<div class="flex gap-4 text-slate-400 text-xs">
+<span>5 Suítes</span>
+<span>8 Vagas</span>
+<span>850m²</span>
+</div>
+<button class="text-primary font-semibold hover:underline">Detalhes</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-tertiary font-label-caps uppercase tracking-widest mb-2 block">Caminho para o seu Sonho</span>
+<h2 class="font-h2 text-h2 text-slate-50">Nosso Processo</h2>
+</div>
+<div class="relative flex flex-col md:flex-row justify-between items-center gap-12">
+<!-- Line Decor -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-slate-800 -translate-y-1/2 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 bg-surface-container p-8 rounded-full w-64 h-64 flex flex-col items-center justify-center border-2 border-primary/20 gloamy-shadow">
+<span class="text-primary font-bold text-lg mb-2">01</span>
+<span class="material-symbols-outlined text-4xl text-slate-50 mb-4">search_check</span>
+<h5 class="font-h3 text-lg text-slate-50">Escolha</h5>
+<p class="text-slate-400 text-xs text-center px-4">Encontre a joia arquitetônica que combina com você.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 bg-surface-container p-8 rounded-full w-64 h-64 flex flex-col items-center justify-center border-2 border-primary/20 gloamy-shadow">
+<span class="text-primary font-bold text-lg mb-2">02</span>
+<span class="material-symbols-outlined text-4xl text-slate-50 mb-4">calendar_month</span>
+<h5 class="font-h3 text-lg text-slate-50">Agende</h5>
+<p class="text-slate-400 text-xs text-center px-4">Uma visita privada e guiada pelo seu consultor.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 bg-surface-container p-8 rounded-full w-64 h-64 flex flex-col items-center justify-center border-2 border-primary/20 gloamy-shadow">
+<span class="text-primary font-bold text-lg mb-2">03</span>
+<span class="material-symbols-outlined text-4xl text-slate-50 mb-4">handshake</span>
+<h5 class="font-h3 text-lg text-slate-50">Feche</h5>
+<p class="text-slate-400 text-xs text-center px-4">Suporte jurídico completo até as chaves em mãos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-background">
+<div class="max-w-[1200px] mx-auto px-6">
+<h2 class="font-h2 text-h2 text-slate-50 text-center mb-16">O que dizem nossos clientes</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container p-10 rounded-2xl tonal-border">
+<div class="flex items-center gap-4 mb-6">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-primary/30" data-alt="A portrait of a sophisticated, middle-aged businessman in a tailored charcoal suit. He is smiling confidently in a modern, sun-drenched office setting with architectural models in the background. The lighting is soft and flattering, emphasizing a professional and trustworthy persona. The color palette is refined with cool grays and crisp whites, echoing the premium real estate brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChv7eXHA5RvKsqRyyRKTKQvFTRuefDEaAuZ-AX1H606sko_YFpBacccBVu3FJl8rQJRbOoqQQ3Fb1A6Squ-pYUtdH3CSUQIF_EIZmIKvmjkKHmhkrWeyrecHfdsWQaSNtcj3OhtgqutUjCVEGY_RucIM0_mKMFoqCYXPRVVExU4lg70_8hcuYwDU8vAXQZ35xNTTjosCyKCJSYK54e5fYscGHQt2W-nY-mmkkmdV5Y953S5ZzAiiveRoQ252lHmWeYEm6qM2uZHlGD"/>
+<div>
+<h6 class="text-slate-50 font-bold">Roberto Silveira</h6>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="text-slate-300 italic text-lg">"A curadoria da Luxe Estate é sem igual. Encontraram uma propriedade que superou todas as minhas expectativas de design e localização."</p>
+</div>
+<div class="bg-surface-container p-10 rounded-2xl tonal-border">
+<div class="flex items-center gap-4 mb-6">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-primary/30" data-alt="A professional woman in her early 40s, exuding elegance and success. She is wearing a chic navy blue blouse and minimalist jewelry, standing in a brightly lit architectural studio. The background is slightly blurred, focusing on her friendly yet authoritative expression. The visual style is clean and high-end, utilizing a palette of deep blues and soft whites to maintain brand consistency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD90dqoOTIJ9e58_JGOmSO18G5J8Owp3gurboY8kCW42Fx-7eEjaEjxu7du6P5s-1yywY99IYqiyA6TKOU7-B9rbj2EsWt3Sn6Rcd8BMUymZEVGfRCWXaQsceTVx874NpX1jsJ_fN0DKztOgQ20IUDC6q_3xEGUnfj3mC8foAhxR7Wgh6btehXG-bRIf_Zj6YMvkLuNKdBg0WAt9QR95Rir-iE9tf272GSHcFc3aEVtRmkVSlWB3gxjypkG8nEDLUOTacW2mrPAyMeq"/>
+<div>
+<h6 class="text-slate-50 font-bold">Mariana Albuquerque</h6>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="text-slate-300 italic text-lg">"O processo foi extremamente fluido. A consultoria jurídica me deu a tranquilidade necessária para um investimento deste porte."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-24 bg-[#111827]">
+<div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-h2 text-h2 text-slate-50 mb-6">Deseja uma consultoria exclusiva?</h2>
+<p class="text-slate-400 text-lg mb-10">Deixe seus dados e um de nossos consultores sênior entrará em contato em menos de 24 horas.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="text-slate-200">+55 (11) 99999-9999</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-slate-200">contato@luxeestate.com.br</span>
+</div>
+</div>
+</div>
+<form class="bg-surface-container p-8 rounded-2xl shadow-2xl tonal-border">
+<div class="space-y-6">
+<div>
+<label class="block text-slate-400 text-xs uppercase tracking-widest mb-2">Nome Completo</label>
+<input class="w-full bg-surface-container-high border-white/5 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary text-slate-50 py-3" placeholder="Seu nome" type="text"/>
+</div>
+<div>
+<label class="block text-slate-400 text-xs uppercase tracking-widest mb-2">Telefone</label>
+<input class="w-full bg-surface-container-high border-white/5 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary text-slate-50 py-3" placeholder="(00) 00000-0000" type="tel"/>
+</div>
+<div>
+<label class="block text-slate-400 text-xs uppercase tracking-widest mb-2">Interesse</label>
+<select class="w-full bg-surface-container-high border-white/5 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary text-slate-50 py-3">
+<option>Comprar Imóvel</option>
+<option>Anunciar Imóvel</option>
+<option>Consultoria</option>
+</select>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 rounded-lg font-bold hover:brightness-110 transition-all shadow-xl">
+                        Quero agendar uma visita
+                    </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 bg-background text-center">
+<div class="max-w-[800px] mx-auto px-6">
+<h2 class="font-h2 text-h2 text-slate-50 mb-8">Pronto para encontrar seu novo imóvel?</h2>
+<p class="text-slate-400 text-xl mb-12">Nossa equipe está preparada para apresentar os endereços mais exclusivos do Brasil.</p>
+<button class="bg-slate-50 text-slate-950 px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform">
+                Explorar Portfólio
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 text-slate-500 py-16 border-t border-white/5">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-12">
+<div class="text-center md:text-left">
+<span class="text-lg font-black text-slate-50 block mb-2">LUXE ESTATE.</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">ARCHITECTURAL PRECISION.</span>
+</div>
+<div class="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-widest font-semibold">
+<a class="hover:text-amber-400 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-amber-400 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-amber-400 transition-colors" href="#">Cookie Policy</a>
+<a class="hover:text-amber-400 transition-colors" href="#">Legal</a>
+<a class="hover:text-amber-400 transition-colors" href="#">Sitemap</a>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.464c1.56.925 3.212 1.414 4.909 1.415 5.436 0 9.859-4.423 9.862-9.86.001-2.635-1.024-5.111-2.887-6.976-1.864-1.865-4.34-2.89-6.976-2.891-5.437 0-9.86 4.423-9.863 9.861-.001 1.83.513 3.611 1.485 5.163l-.934 3.412 3.404-.894zm11.387-7.464c-.301-.15-1.781-.879-2.057-.979-.275-.101-.476-.151-.677.15-.201.301-.778 1.003-.954 1.205-.176.201-.351.226-.652.076-.301-.151-1.272-.469-2.422-1.494-.894-.797-1.498-1.782-1.674-2.083-.176-.301-.019-.463.131-.613.135-.134.301-.351.452-.527.151-.176.201-.301.301-.502.101-.201.05-.376-.025-.527-.075-.151-.677-1.631-.928-2.233-.244-.586-.492-.507-.677-.516-.175-.008-.376-.01-.577-.01s-.527.075-.803.376c-.276.301-1.054 1.029-1.054 2.509s1.079 2.911 1.229 3.112c.151.201 2.125 3.245 5.148 4.55.719.311 1.28.497 1.717.637.722.229 1.378.197 1.897.12.579-.086 1.781-.728 2.032-1.43.251-.702.251-1.305.176-1.43-.075-.126-.276-.201-.577-.352z"></path></svg>
+</a>
+</div>
+</div>
+<div class="text-center text-[10px] text-slate-600 tracking-widest pt-8 border-t border-white/5">
+                © 2024 LUXE ESTATE. ALL RIGHTS RESERVED. ARCHITECTURAL PHOTOGRAPHY BY LUXE STUDIOS.
+            </div>
+</div>
+</footer>
+<!-- Floating WhatsApp -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform z-50" href="https://wa.me/5511999999999" target="_blank">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.464c1.56.925 3.212 1.414 4.909 1.415 5.436 0 9.859-4.423 9.862-9.86.001-2.635-1.024-5.111-2.887-6.976-1.864-1.865-4.34-2.89-6.976-2.891-5.437 0-9.86 4.423-9.863 9.861-.001 1.83.513 3.611 1.485 5.163l-.934 3.412 3.404-.894zm11.387-7.464c-.301-.15-1.781-.879-2.057-.979-.275-.101-.476-.151-.677.15-.201.301-.778 1.003-.954 1.205-.176.201-.351.226-.652.076-.301-.151-1.272-.469-2.422-1.494-.894-.797-1.498-1.782-1.674-2.083-.176-.301-.019-.463.131-.613.135-.134.301-.351.452-.527.151-.176.201-.301.301-.502.101-.201.05-.376-.025-.527-.075-.151-.677-1.631-.928-2.233-.244-.586-.492-.507-.677-.516-.175-.008-.376-.01-.577-.01s-.527.075-.803.376c-.276.301-1.054 1.029-1.054 2.509s1.079 2.911 1.229 3.112c.151.201 2.125 3.245 5.148 4.55.719.311 1.28.497 1.717.637.722.229 1.378.197 1.897.12.579-.086 1.781-.728 2.032-1.43.251-.702.251-1.305.176-1.43-.075-.126-.276-.201-.577-.352z"></path></svg>
+</a>
+</body></html>
