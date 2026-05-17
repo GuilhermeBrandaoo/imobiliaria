@@ -10,7 +10,8 @@ O design visual do projeto foi desenvolvido com auxílio de Inteligência Artifi
 
 # ✨ Preview do Projeto
 
-<img width="100%" src="./img/preview.png">
+<img width="400" height="191" alt="video" src="https://github.com/user-attachments/assets/0e7011c1-d170-4d13-93d6-b2a076958310" />
+
 
 ---
 
@@ -112,17 +113,7 @@ Algumas melhorias que pretendo adicionar futuramente:
 
 - [ ] Melhor validação do formulário
 - [ ] Máscara automática no telefone
-- [ ] Menu mobile
-- [ ] Animações ao scroll
-- [ ] Cards de imóveis dinâmicos
-- [ ] Backend para envio real de dados
-- [ ] Integração com banco de dados
-- [ ] Sistema de agendamento real
-- [ ] Dark/Light mode
-- [ ] Melhor acessibilidade
-- [ ] Melhor organização do JavaScript
-- [ ] SEO básico
-- [ ] Otimização de performance
+- [ ] Menu hamburguer
 
 ---
 
@@ -146,5 +137,4 @@ Acesse o projeto online:
 
 Desenvolvedor Front-End em aprendizado constante, focado em criação de interfaces modernas e projetos práticos utilizando HTML, CSS e JavaScript.
 
-- GitHub: :contentReference[oaicite:0]{index=0}
-- LinkedIn: :contentReference[oaicite:1]{index=1}
+- LinkedIn: [:contentReference[oaicite:1]{index=1}](https://www.linkedin.com/in/guilherme-brandao-da-silva/)
