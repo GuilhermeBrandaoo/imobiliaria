@@ -10,7 +10,7 @@ O design visual do projeto foi desenvolvido com auxílio de Inteligência Artifi
 
 # ✨ Preview do Projeto
 
-<img width="400" height="191" alt="video" src="https://github.com/user-attachments/assets/0e7011c1-d170-4d13-93d6-b2a076958310" />
+<img width="100%" height="100%" alt="video" src="https://github.com/user-attachments/assets/0e7011c1-d170-4d13-93d6-b2a076958310" />
 
 
 ---
