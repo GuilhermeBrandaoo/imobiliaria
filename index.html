@@ -18,13 +18,13 @@
             <h1>Alto Padrão Imóveis</h1>
         </div>
         <nav>
-            <a href="#">Propriedades</a>
-            <a href="#">Processo</a>
-            <a href="#">Avaliações</a>
-            <a href="#">Contato</a>
+            <a href="#casas">Propriedades</a>
+            <a href="#processo">Processo</a>
+            <a href="#avaliacao">Avaliações</a>
+            <a href="#contato">Contato</a>
         </nav>
         <div class="header-button">
-            <button>Fazer Tour</button>
+            <a href="#casas"><button>Fazer Tour</button></a>
         </div>
     </header>
 
@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div class="house-cards">
+        <div class="house-cards" id="casas">
             <div class="house-card">
                 <div class="img-house-card">
                     <span>R$ 4.500.000</span>
@@ -141,7 +141,7 @@
         </div>
     </section>
 
-    <section class="process">
+    <section class="process" id="processo">
         <div class="title-process">
             <h3>CAMINHO PARA O SEU SONHO</h3>
             <h2>Nosso Processo</h2>
@@ -172,7 +172,7 @@
         </div>
     </section>
 
-    <section class="avaliacao">
+    <section class="avaliacao" id="avaliacao">
         <div class="title-avaliacao">
             <h2>O que dizem nossos clientes</h2>
         </div>
@@ -222,7 +222,7 @@
         </div>
     </section>
 
-    <section class="form">
+    <section class="form" id="contato">
         <div class="text-formulario">
             <h2>Deseja uma consultoria exclusiva?</h2>
             <p>Deixe seus dados e um de nossos consultores sênior entrará em contato em menos de 24 horas.</p>
@@ -232,18 +232,18 @@
         <div class="formulario">
             <form action="">
                 <p>NOME COMPLETO</p>
-                <input type="text" placeholder="Seu nome">
+                <input type="text" placeholder="Seu nome" id="nome" value="">
 
                 <p>TELEFONE</p>
-                <input type="text" placeholder="(00) 00000-0000">
+                <input type="text" placeholder="(00) 00000-0000" id="telefone" value="">
 
                 <p>INTERESSE</p>
-                <select name="" id="">
-                    <option value="">Comprar Imóvel</option>
-                    <option value="">Financiar Imóvel</option>
-                    <option value="">Vender Imóvel</option>
+                <select name="" id="interesse">
+                    <option value="comprar">Comprar Imóvel</option>
+                    <option value="financiar">Financiar Imóvel</option>
+                    <option value="vender">Vender Imóvel</option>
                 </select>
-                <button>Quero agendar uma visita</button>
+                <button onclick="agendamento()">Quero agendar uma visita</button>
             </form>
         </div>
     </section>
@@ -269,6 +269,7 @@
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </footer>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>
